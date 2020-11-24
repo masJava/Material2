@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import com.mas.material2.data.DataList
+import kotlinx.android.synthetic.main.activity_scrolling.*
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -18,6 +21,9 @@ class ScrollingActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
 
         }
+        rv_card.setHasFixedSize(true)
+        rv_card.layoutManager = GridLayoutManager(this, 2)
+        rv_card.adapter = RVAdapter(DataList.get())
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -37,3 +43,4 @@ class ScrollingActivity : AppCompatActivity() {
         }
     }
 }
+
