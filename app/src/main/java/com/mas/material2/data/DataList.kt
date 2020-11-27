@@ -1,18 +1,26 @@
 package com.mas.material2.data
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.mas.material2.R
 
 object DataList {
-    fun get() = listOf(
+    private val hamsterLiveData = MutableLiveData<MutableList<DataClass>>()
+
+    init {
+        hamsterLiveData.value = mutableListOf(
             DataClass("Апполон", R.drawable.hamster1),
-            DataClassRev(R.drawable.hamster2, "Винтик"),
+            DataClass("Винтик", R.drawable.hamster2),
             DataClass("Жолудь", R.drawable.hamster3),
-            DataClassRev(R.drawable.hamster4, "Винни"),
+            DataClass("Винни", R.drawable.hamster4),
             DataClass("Жан", R.drawable.hamster5),
-            DataClassRev(R.drawable.hamster6, "Бандит"),
+            DataClass("Бандит", R.drawable.hamster6),
             DataClass("Бублик", R.drawable.hamster7),
-            DataClassRev(R.drawable.hamster8, "Зорро"),
+            DataClass("Зорро", R.drawable.hamster8),
             DataClass("Зуффи", R.drawable.hamster9)
-    )
+        )
+    }
+
+    fun get(): LiveData<MutableList<DataClass>> = hamsterLiveData
 
 }
