@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Material2</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_tabbed">TabbedActivity</string>
-    <string name="tab_main">Главная</string>
-    <string name="tab_favorites">Избранное</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="fab">FAB</string>
+    <string name="app_name">Material_Style</string>
+    <string name="style">Style</string>
+    <string name="name">Введите имя:</string>
+    <string name="roboto">Текст написан шрифтом Roboto</string>
+    <string name="caveat">Текст написан шрифтом Caveat</string>
 </resources>
